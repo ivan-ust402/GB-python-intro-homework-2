@@ -29,6 +29,17 @@ def add_all_params(index, params):
     """ collect all params in tuple """
     return tuple([index, params])
 
+def get_analytics(products_base_date):
+    """Get analytics"""
+    analytics_dictionary = {}
+    for elem in products_base_date:
+        for param_key, param_val in elem[1].items():
+            if param_key in analytics_dictionary:
+                analytics_dictionary[param_key].append(param_val)
+            else:
+                analytics_dictionary[param_key] = [param_val]
+    return analytics_dictionary
+
 all_products = []
 while input('Вы хотите добавить товар? Напишите "да" или "нет": ') == 'да':
     number = int(input("Введите порядковый номер товара: "))
@@ -42,3 +53,4 @@ while input('Вы хотите добавить товар? Напишите "д
     all_products.append(product)
 
 print(all_products)
+print(get_analytics(all_products))
