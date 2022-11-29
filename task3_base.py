@@ -23,5 +23,18 @@ def find_season_list(number):
         index = 4
     return seasons[index]
 
+def find_season_dict(number):
+    """Show time of year"""
+    result = None
+    seasons = {1: 'зима', 2: 'зима', 3: 'весна', 4: 'весна', 5: 'весна',
+               6: 'лето', 7: 'лето', 8: 'лето', 9: 'осень', 10: 'осень',
+               11: 'осень', 12: 'зима'}
+    if number < 1 or number > 12:
+        result = 'нет такого месяца!'
+    else:
+        result = seasons[number]
+    return result
+
 month = int(input("Введите месяц в виде целого числа от 1 до 12: "))
 print(find_season_list(month))
+print(find_season_dict(month))
