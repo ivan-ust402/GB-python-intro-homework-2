@@ -11,16 +11,19 @@
 my_list = [7, 5, 3, 3, 2].
 """
 def show_rating(array, number):
-    """Show rating"""
+    """ Showing rating """
     match_in_array = array.count(number)
-    for el_array in array:
-        if match_in_array > 0:
-            index_match = array.index(number)
-            array.insert(index_match + match_in_array, number)
-        else:
-            if number > el_array:
-                index_el_array = array.index(el_array)
-                array.insert(index_el_array, number)
-            elif number < array[len(array) - 1]:
-                array.append(number)
+    if match_in_array > 0:
+        index_match = array.index(number)
+        array.insert(index_match + match_in_array, number)
+    else:
+        if number > array[0]:
+            array.insert(0, number)
+        elif number < array[len(array) - 1]:
+            array.append(number)
     return array
+
+
+my_list = [7, 5, 3, 3, 2]
+input_number = int(input("Введите новый элемент рейтинга: "))
+print(show_rating(my_list, input_number))
