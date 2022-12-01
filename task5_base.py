@@ -10,6 +10,7 @@
 Набор натуральных чисел можно задать непосредственно в коде, например,
 my_list = [7, 5, 3, 3, 2].
 """
+# New comment
 def show_rating(array, number):
     """ Showing rating """
     match_in_array = array.count(number)

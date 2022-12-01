@@ -4,6 +4,7 @@
 элементов последний сохранить на своем месте. Для заполнения списка элементов
 необходимо использовать функцию input().
 """
+# New comment
 def create_list(array_size):
     """ Creating and Filling list """
     array = []

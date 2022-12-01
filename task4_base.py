@@ -3,6 +3,7 @@
 Вывести каждое слово с новой строки. Строки необходимо пронумеровать.
 Если в слово длинное, выводить только первые 10 букв в слове.
 """
+# New comment
 def print_formatting_message(string):
     """ Message Formatting Method """
     intermediate_list = string.split(' ')
