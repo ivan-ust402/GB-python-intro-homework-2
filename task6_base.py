@@ -21,7 +21,6 @@
 “ед”: [“шт.”]
 }
 """
-# New comment
 def add_params(params, param_key, param_val):
     """ add parameters in dictionary"""
     params[param_key] = param_val
